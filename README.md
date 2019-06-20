@@ -10,4 +10,4 @@ The MER Mobile Reference system consists of three major software components, def
 
 3.	The mobile application – this is the application that users install to their mobile devices from the mobile app store to view the content.  The application downloads the content from Contentful and stores it locally on the user’s device to allow users to use the system without an internet connection.  This is the only interface that end users will be aware of.  The mobile application is used primarily by the end users.
 
-This repo is for component 2, the content editor, which is a C# Net Windows forms application.
+This repo is for component 2, the content editor, which is a C# Net WPF application.
