@@ -1,0 +1,13 @@
+﻿<Window x:Class="ContentfullWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ContentfullWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <WebBrowser Source="https://be.contentful.com/oauth/authorize?response_type=token&amp;client_id=af524113ed68b8e8db2c7fe7b9ec8c2a0332e278adf9e6ae291b6c92e7d6058b&amp;redirect_uri=https://127.0.0.1&amp;scope=content_management_manage"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contentful.Importer.Library", "Contentfull.Importer.Library\Contentful.Importer.Library.csproj", "{DFC50B5C-B1B9-47E2-9C7F-73CD5FE42044}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contentful.Importer.App", "Contentfull.Importer.App\Contentful.Importer.App.csproj", "{80A81FB6-4944-43DA-9EB9-67F77B8444C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFC50B5C-B1B9-47E2-9C7F-73CD5FE42044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFC50B5C-B1B9-47E2-9C7F-73CD5FE42044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFC50B5C-B1B9-47E2-9C7F-73CD5FE42044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFC50B5C-B1B9-47E2-9C7F-73CD5FE42044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A81FB6-4944-43DA-9EB9-67F77B8444C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A81FB6-4944-43DA-9EB9-67F77B8444C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A81FB6-4944-43DA-9EB9-67F77B8444C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A81FB6-4944-43DA-9EB9-67F77B8444C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A93BC78E-1638-4A32-AA90-7E1CF14C8494}
+	EndGlobalSection
+EndGlobal
