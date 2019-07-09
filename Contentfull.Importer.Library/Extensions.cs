@@ -40,28 +40,20 @@ namespace Contentful.Importer.Library.Extensions
             {
                 case "Integer":
                     return Datatype.Integer;
-                    break;
                 case "Symbol":
                     return Datatype.Symbol;
-                    break;
                 case "Text":
                     return Datatype.Text;
-                    break;
                 case "Date":
                     return Datatype.Date;
-                    break;
                 case "Boolean":
                     return Datatype.Boolean;
-                    break;
                 case "Object":
                     return Datatype.Object;
-                    break;
                 case "Link":
                     return Datatype.Link;
-                    break;
                 case "Array":
                     return Datatype.Array;
-                    break;
 
                 default:
                     return Datatype.Symbol;

@@ -1,6 +1,5 @@
 ﻿using Contentful.Core.Models;
 using Contentful.Importer.Library.Extensions;
-using Google.Apis.Sheets.v4.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -146,7 +145,7 @@ namespace Contentful.Importer.Library.Models
             return list;
         }
 
-        public List<string[]> GetGoogleSheetData()
+        public List<string[]> GetWorksheetData()
         {
             List<string[]> list = new List<string[]>();
             list.Add(GetColumns(false));
@@ -166,13 +165,6 @@ namespace Contentful.Importer.Library.Models
             return list;
         }
 
-        public UpdateValuesResponse UploadDataToGoogleSheet()
-        {
-            var googleSheets = new GoogleSheets();
-            var data = GetGoogleSheetData();
-            var response = googleSheets.UploadData(ContentFullType.SystemProperties.Id, data);
-            return response;
-
-        }
+    
     }
 }

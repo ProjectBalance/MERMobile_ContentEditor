@@ -7,7 +7,6 @@ namespace Contentful.Importer.App.Extensions
     public static class Extensions
     {
 
-
         public static string[] ExtractJsonArray(this string input)
         {
             List<string> data = new List<string>();

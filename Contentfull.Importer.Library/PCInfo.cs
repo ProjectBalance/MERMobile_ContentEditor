@@ -11,7 +11,7 @@ namespace Contentful.Importer.Library
             try
             {
           
-                //Get motherboard's serial number 
+                //Get mainboard serial number and combine with static secret to encrypt login details in settings file to make it unique to this PC so that it can't be reused.
                 ManagementObjectSearcher mbs = new ManagementObjectSearcher("Select * From Win32_BaseBoard");
                 foreach (ManagementObject mo in mbs.Get())
                 {

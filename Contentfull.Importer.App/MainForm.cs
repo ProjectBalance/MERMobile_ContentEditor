@@ -26,8 +26,6 @@ namespace Contentful.Importer.App
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.Hide();
-            //var auth = new oAuthForm();
-            //var result = auth.ShowDialog(this);
             var auth = new CapturePermaTokenForm();
             var result = auth.ShowDialog(this);
             if (result == DialogResult.OK && !string.IsNullOrEmpty(auth.ResultCode))

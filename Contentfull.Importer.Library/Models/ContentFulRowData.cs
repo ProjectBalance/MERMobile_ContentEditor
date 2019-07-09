@@ -166,7 +166,10 @@ namespace Contentful.Importer.Library.Models
             }
             else if (field.GetDataType() == Extensions.Extensions.Datatype.Boolean)
             {
-
+                if (string.IsNullOrEmpty(value))
+                {
+                    value = "false";
+                }
                 data = new Dictionary<string, bool>();
                 (data as Dictionary<string, bool>).Add("en-US", bool.Parse(value));
             }

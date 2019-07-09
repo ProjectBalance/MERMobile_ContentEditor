@@ -26,14 +26,11 @@ namespace Contentful.Importer.App
             {
                 token = TokenData.Load();
             }
-            catch (Exception err)
+            catch (Exception)
             {
                 Program.SplashScreen.Hide();
                 this.Show();
                 token = new TokenData();
-                //MessageBox.Show(this, err.Message, "Error",  MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                
             }
             TokenInfo = token;
             txtToken.Text = token.Token;

@@ -95,7 +95,7 @@ namespace Contentful.Importer.App.Interfaces
                                     excelWorkbook.ClearSheetData(sheet);
                                     excelWorkbook.SavePackage();
                                 }
-                                var data = TypeData.GetGoogleSheetData();
+                                var data = TypeData.GetWorksheetData();
                                 int rowindex = 1;
                                 foreach (var row in data)
                                 {
@@ -113,7 +113,7 @@ namespace Contentful.Importer.App.Interfaces
                             {
                                 excelWorkbook.Workbook.Worksheets.Add(TypeData.Label);
                                 sheet = excelWorkbook.Workbook.Worksheets[TypeData.Label];                               
-                                var data = TypeData.GetGoogleSheetData();
+                                var data = TypeData.GetWorksheetData();
                                 int rowindex = 1;
                                 foreach(var row in data)
                                 {
@@ -231,7 +231,7 @@ namespace Contentful.Importer.App.Interfaces
                             {
                                 excelWorkbook.Workbook.Worksheets.Add(TypeData.Label);
                                 sheet = excelWorkbook.Workbook.Worksheets[TypeData.Label];
-                                var data = TypeData.GetGoogleSheetData();
+                                var data = TypeData.GetWorksheetData();
                                 int rowindex = 1;
                                 foreach (var row in data)
                                 {
