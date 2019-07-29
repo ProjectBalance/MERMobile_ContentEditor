@@ -104,7 +104,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 17);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Ver 1.00 2019-05-22";
+            this.label2.Text = "Ver 1.01 2019-07-10";
             // 
             // MainForm
             // 

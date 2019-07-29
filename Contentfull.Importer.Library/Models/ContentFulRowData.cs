@@ -10,7 +10,6 @@ namespace Contentful.Importer.Library.Models
 {
     public class ContentFulRowData
     {
-
         public string SysID { get; set; }
         public int VersionNo { get; set; }
         public Dictionary<string, string> FieldData { get; set; }
@@ -129,9 +128,12 @@ namespace Contentful.Importer.Library.Models
         }
         public object GetFieldDictionary(Core.Models.Field field)
         {
+
             object data = null;
             var value = FieldData[field.Id];
-            if (field.GetDataType() == Extensions.Extensions.Datatype.Integer)
+            Extensions.Extensions.Datatype datType = field.GetDataType();
+
+            if (datType == Extensions.Extensions.Datatype.Integer)
             {
                 if (string.IsNullOrEmpty(value))
                 {
@@ -140,7 +142,7 @@ namespace Contentful.Importer.Library.Models
                 data = new Dictionary<string, int>();
                 (data as Dictionary<string, int>).Add("en-US", int.Parse(value));
             }
-            else if (field.GetDataType() == Extensions.Extensions.Datatype.Object)
+            else if (datType == Extensions.Extensions.Datatype.Object)
             {
                 if (!string.IsNullOrEmpty(value))
                 {
@@ -149,7 +151,7 @@ namespace Contentful.Importer.Library.Models
                     (data as Dictionary<string, object>).Add("en-US", val);
                 }
             }
-            else if (field.GetDataType() == Extensions.Extensions.Datatype.Link)
+            else if (datType == Extensions.Extensions.Datatype.Link)
             {
                 if (!string.IsNullOrEmpty(value))
                 {
@@ -158,13 +160,13 @@ namespace Contentful.Importer.Library.Models
                     (data as Dictionary<string, object>).Add("en-US", val);
                 }
             }
-            else if (field.GetDataType() == Extensions.Extensions.Datatype.Date)
+            else if (datType == Extensions.Extensions.Datatype.Date)
             {
                 var val = DateTime.Parse(value);
                 data = new Dictionary<string, string>();
                 (data as Dictionary<string, string>).Add("en-US", value);
             }
-            else if (field.GetDataType() == Extensions.Extensions.Datatype.Boolean)
+            else if (datType == Extensions.Extensions.Datatype.Boolean)
             {
                 if (string.IsNullOrEmpty(value))
                 {
@@ -173,7 +175,7 @@ namespace Contentful.Importer.Library.Models
                 data = new Dictionary<string, bool>();
                 (data as Dictionary<string, bool>).Add("en-US", bool.Parse(value));
             }
-            else if (field.GetDataType() == Extensions.Extensions.Datatype.Array)
+            else if (datType == Extensions.Extensions.Datatype.Array)
             {
                 if (!string.IsNullOrEmpty(value))
                 {
@@ -213,7 +215,7 @@ namespace Contentful.Importer.Library.Models
                         }
                         data.Add(field.Name, fieldChild.Value.ToString());
                     }
-                    else
+                        else
                     {
                         data.Add(field.Name, "");
                     }
@@ -227,16 +229,17 @@ namespace Contentful.Importer.Library.Models
 
 
             }
-            this.FieldData = data;
+            this.FieldData = data; //Ed
         }
 
         public bool ValidateRow(Core.Models.Field[] fields, int rowIndex, out string[] reportresult)
         {
             bool result = true;
             var report = new List<string>();
+            Extensions.Extensions.Datatype datType;
             foreach (var field in fields)
             {
-
+                datType = field.GetDataType();
                 var value = FieldData[field.Id];
                 if (string.IsNullOrEmpty(value) && field.Required)
                 {
@@ -267,7 +270,7 @@ namespace Contentful.Importer.Library.Models
                         result = false;
                     }
                 }
-                else if (field.GetDataType() == Extensions.Extensions.Datatype.Integer && field.Required && string.IsNullOrEmpty(value))
+                else if (datType == Extensions.Extensions.Datatype.Integer && field.Required && string.IsNullOrEmpty(value))
                 {
                     int val;
                     if (!int.TryParse(value, out val))
@@ -285,7 +288,7 @@ namespace Contentful.Importer.Library.Models
                     }
 
                 }
-                else if(field.GetDataType() == Extensions.Extensions.Datatype.Link || field.GetDataType() == Extensions.Extensions.Datatype.Object)
+                else if(datType == Extensions.Extensions.Datatype.Link || datType == Extensions.Extensions.Datatype.Object)
                 {
                     if (!string.IsNullOrEmpty(value))
                     {
@@ -307,7 +310,7 @@ namespace Contentful.Importer.Library.Models
 
                     }
                 }
-                else if (field.GetDataType() == Extensions.Extensions.Datatype.Array)
+                else if (datType == Extensions.Extensions.Datatype.Array)
                 {
                     if (!string.IsNullOrEmpty(value))
                     {

@@ -61,9 +61,9 @@
             this.grpMain.Controls.Add(this.btnConfirm);
             this.grpMain.Controls.Add(this.btnExit);
             this.grpMain.Location = new System.Drawing.Point(16, 15);
-            this.grpMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpMain.Margin = new System.Windows.Forms.Padding(4);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpMain.Padding = new System.Windows.Forms.Padding(4);
             this.grpMain.Size = new System.Drawing.Size(455, 283);
             this.grpMain.TabIndex = 0;
             this.grpMain.TabStop = false;
@@ -84,7 +84,7 @@
             this.txtSpaceID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSpaceID.Location = new System.Drawing.Point(4, 43);
-            this.txtSpaceID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSpaceID.Margin = new System.Windows.Forms.Padding(4);
             this.txtSpaceID.Name = "txtSpaceID";
             this.txtSpaceID.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtSpaceID.Size = new System.Drawing.Size(436, 22);
@@ -105,7 +105,7 @@
             this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsername.Location = new System.Drawing.Point(4, 143);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtUsername.Size = new System.Drawing.Size(436, 22);
@@ -115,7 +115,7 @@
             // 
             this.btnChangePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnChangePassword.Location = new System.Drawing.Point(9, 247);
-            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(4);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(149, 28);
             this.btnChangePassword.TabIndex = 6;
@@ -148,7 +148,7 @@
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.Location = new System.Drawing.Point(1, 192);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -161,7 +161,7 @@
             this.txtToken.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtToken.Location = new System.Drawing.Point(4, 94);
-            this.txtToken.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtToken.Margin = new System.Windows.Forms.Padding(4);
             this.txtToken.Name = "txtToken";
             this.txtToken.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtToken.Size = new System.Drawing.Size(436, 22);
@@ -171,7 +171,7 @@
             // 
             this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnConfirm.Location = new System.Drawing.Point(239, 247);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(100, 28);
             this.btnConfirm.TabIndex = 5;
@@ -184,10 +184,10 @@
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Location = new System.Drawing.Point(347, 247);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(100, 28);
-            this.btnExit.TabIndex = 0;
+            this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -201,7 +201,7 @@
             this.Controls.Add(this.grpMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CapturePermaTokenForm";

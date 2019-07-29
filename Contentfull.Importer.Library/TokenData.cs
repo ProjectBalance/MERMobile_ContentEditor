@@ -23,7 +23,7 @@ namespace Contentful.Importer.Library
             var data = JsonConvert.SerializeObject(this);
             var encryptionKey = EncKey;
             encryptionKey = Crypto.Hash.SHA256(encryptionKey);
-            data = Crypto.SymmetricEncryption.RijndaelAlgorithm.Encrypt(data, encryptionKey);
+            data = Crypto.SymmetricEncryption.FIPSAes.Encrypt(data, encryptionKey);
             System.IO.File.WriteAllText(filename, data);
 
         }
@@ -41,7 +41,7 @@ namespace Contentful.Importer.Library
 
                     try
                     {
-                        data = Crypto.SymmetricEncryption.RijndaelAlgorithm.Decrypt(data, encryptionKey);
+                        data = Crypto.SymmetricEncryption.FIPSAes.Decrypt(data, encryptionKey);
                         return JsonConvert.DeserializeObject<TokenData>(data);
 
                     }

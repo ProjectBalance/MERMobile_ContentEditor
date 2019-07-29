@@ -51,7 +51,7 @@ namespace Contentful.Importer.App
             else
             {
                 btnConfirm.Text = "Save";
-                this.ActiveControl = txtToken;
+                this.ActiveControl = txtSpaceID;
                 btnChangePassword.Visible = false;
                 
             }
@@ -130,13 +130,13 @@ namespace Contentful.Importer.App
             if (result == DialogResult.Yes)
             {
                 txtToken.PasswordChar = '\0';
-                this.ActiveControl = txtToken;
                 this.txtToken.ReadOnly = false;
                 this.txtSpaceID.ReadOnly = false;
                 this.txtToken.Text = "";
                 this.txtSpaceID.Text = "";
                 this.txtUsername.Text = "";
                 this.lblPassword.Text = "Create Password:";
+                this.ActiveControl = txtSpaceID;
                 this.txtUsername.ReadOnly = false;
                 TokenInfo = new TokenData();
 

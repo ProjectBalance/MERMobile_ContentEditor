@@ -197,7 +197,6 @@ namespace Contentful.Importer.Library.ContentFul
             int take = 50;
             var  data = new List<Models.ContentFulRowData>();
 
-
             // var categories = await _apiClient.GetEntriesByType("category", QueryBuilder<Category>.New.Include(5).LocaleIs(HttpContext?.Session?.GetString(Startup.LOCALE_KEY) ?? CultureInfo.CurrentCulture.ToString()));
             var type = ContentTypes.First(p => p.TypeID.Equals(typeID));
             bool allData = false;
